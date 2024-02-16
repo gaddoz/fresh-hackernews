@@ -1,6 +1,6 @@
 import Layout from "../components/Layout.tsx";
 import Story from "../components/Story.tsx";
-import { Handlers, PageProps } from "https://deno.land/x/fresh@1.0.1/server.ts";
+import { Handlers, PageProps } from "$fresh/src/server/mod.ts";
 import { IStory } from "../types.ts";
 import fetchAPI from "../api.ts";
 
@@ -21,9 +21,9 @@ const mapStories = {
 export const handler: Handlers<StoriesData> = {
   async GET(req, ctx) {
     const url = new URL(req.url);
-    const page = +(url.searchParams.get('page') || 1);
+    const page = +(url.searchParams.get("page") || 1);
     const { stories: storyParam } = ctx.params;
-    const type =  storyParam || "top";
+    const type = storyParam || "top";
 
     const stories = await fetchAPI(
       `${mapStories[type as keyof mapStories]}?page=${page}`
@@ -35,7 +35,9 @@ export const handler: Handlers<StoriesData> = {
   },
 };
 
-export default function Stories({ data: { stories, type, page } }: PageProps<StoriesData>) {
+export default function Stories({
+  data: { stories, type, page },
+}: PageProps<StoriesData>) {
   return (
     <Layout>
       <div class="news-view">
