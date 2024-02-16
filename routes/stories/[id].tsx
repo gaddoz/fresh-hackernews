@@ -1,6 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
-
 import type { IStory } from "../../types.ts";
 import Layout from "../../components/Layout.tsx";
 import Comment from "../../islands/Comment.tsx";

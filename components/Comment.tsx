@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import type { IComment } from "../types.ts";
 import Toggle from '../islands/Toggle.tsx';
 

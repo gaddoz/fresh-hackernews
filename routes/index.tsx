@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h } from "preact";
 import Layout from "../components/Layout.tsx";
 import Story from "../components/Story.tsx";
 import { Handlers, PageProps } from "https://deno.land/x/fresh@1.0.1/server.ts";

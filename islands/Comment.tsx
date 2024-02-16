@@ -1,5 +1,3 @@
-/** @jsx h */
-import { h, Fragment } from "preact";
 import { useState } from "preact/hooks";
 
 import type { IComment } from "../types.ts";
@@ -20,7 +18,7 @@ const Comment = (props: { comment: IComment }) => {
         dangerouslySetInnerHTML={{ __html: props.comment.content }}
       />
       {props.comment.comments.length ? (
-        <Fragment>
+        <>
           <div className={open ? "toggle open" : "toggle"}>
             <a onClick={() => setOpen(!open)}>
               {open
@@ -37,7 +35,7 @@ const Comment = (props: { comment: IComment }) => {
               ))}
             </ul>
           )}
-        </Fragment>
+        </>
       ) : undefined}
     </li>
   );

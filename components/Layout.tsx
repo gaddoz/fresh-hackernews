@@ -1,10 +1,8 @@
-/** @jsx h */
-import { h, Fragment } from "preact";
 import { Head } from "$fresh/runtime.ts";
 
 export default ({ children }) => {
   return (
-    <Fragment>
+    <>
       <Head>
         <meta name="description" content="Fresh Hackernews" />
         <link rel="stylesheet" href="/global.css" />
@@ -38,6 +36,6 @@ export default ({ children }) => {
         </nav>
       </header>
       {children}
-    </Fragment>
+    </>
   );
 };
