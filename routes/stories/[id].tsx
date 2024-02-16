@@ -1,7 +1,7 @@
 import type { IStory } from "../../types.ts";
 import Layout from "../../components/Layout.tsx";
-// import Comment from "../../islands/Comment.tsx";
-import Comment from "../../components/Comment.tsx";
+import Comment from "../../islands/Comment.tsx";
+// import Comment from "../../components/Comment.tsx";
 import fetchAPI from "../../api.ts";
 import { Handlers, PageProps } from "$fresh/src/server/mod.ts";
 
